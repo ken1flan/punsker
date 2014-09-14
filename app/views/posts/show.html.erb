@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @post.user_id %>
+</p>
+
+<p>
+  <strong>Body text:</strong>
+  <%= @post.body_text %>
+</p>
+
+<p>
+  <strong>Emotion level:</strong>
+  <%= @post.emotion_level %>
+</p>
+
+<%= link_to 'Back', posts_path %>

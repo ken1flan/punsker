@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   resources :posts, except: [:edit, :update]
 
+  namespace :small do
+    resources :posts, only: [:index, :new, :create]
+  end
+
   devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks' }
   match '/profile/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], :as => :finish_signup
 

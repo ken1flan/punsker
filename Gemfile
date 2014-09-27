@@ -22,3 +22,7 @@ group :development do
   gem 'spring'
   gem 'letter_opener'
 end
+
+group :development, :test do
+  gem "pry-rails"
+end
